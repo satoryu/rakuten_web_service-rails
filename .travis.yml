@@ -13,6 +13,8 @@ matrix:
   - rvm: 2.1.9
     gemfile: gemfiles/Gemfile.rail5
 notifications:
+  email: false
+
   hipchat:
     rooms:
       secure: MkaCXbqKaSrfuhX/KYFpOI23BTU7SLMKa+y68ywGLFMPZfg4vlSF2V7BdXQADwomzOe4MK0p3T1YbIydOoXlbCgYBRFfntUGZft8KxCyeQSbaYSDKYRrdyU1pwWwxRT889Z0U9JCgr16F+/HWzA1U3qyMeIyhIiciU1jCeHLtmaP6CtFTFXSoyfDCVGkED+zriFKcTL2uKt2ZK+9D2w2Uq75iGSLmCIGzfMTIN6h69qIVdQac3SDHn6ZtXer0A82vb1WEWfffOELmHl9U5amNN/8UFR/P9YqdJOZjeuzLnC4iL/QHbvhaOYea/z6JBYW/c8P+aZo/4UAFRUfseKomdcLyqTWnG5UJdDHLfWSU5DOpgp5WJn5VFF/vCHN65koNC8PmVatAWDn6nWc+bHcbZ/Vb9YyEMPzOmpxEjJxmuDzzwbbhOhLJDQliT1JwLevhRHWBPbimVju1rKJIkC4p/e2m8uQAukUkadDDPxl70lCivamoFxPWfPczXCUGum9C95OY0678sGoYHvXHqL1cGE1YVMpvT+LHtw3eAMouk3E0u9g8ullJ4tgMnl2CXJ+0s7hwTkvq6HOyRBCDhwP9+w9+XzkgW9DFtxXaykJN3zI9F2Z97EovmqXPY7mbQRstx9HlQhpHtgmg2gZiO9SoiTFbt7DZDMCinaQEdFMzL8=
