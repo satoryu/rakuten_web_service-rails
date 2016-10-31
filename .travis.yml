@@ -10,3 +10,8 @@ gemfile:
   - gemfiles/Gemfile.rail5
 
 before_install: gem install bundler -v 1.12.5
+
+matrix:
+  exclude:
+    - rvm: 2.1.9
+      gemfile: gemfiles/Gemfile.rail5 # Rails 5 support ruby 2.2.2 or newer.
