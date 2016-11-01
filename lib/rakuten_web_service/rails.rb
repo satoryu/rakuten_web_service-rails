@@ -1,7 +1,7 @@
 require "rakuten_web_service/rails/version"
+require 'rails'
 
 module RakutenWebService
-  module Rails
-    # Your code goes here...
+  class Railtie < ::Rails::Railtie
   end
 end

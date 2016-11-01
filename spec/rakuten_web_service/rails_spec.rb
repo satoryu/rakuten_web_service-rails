@@ -1,11 +1,4 @@
 require 'spec_helper'
 
-describe RakutenWebService::Rails do
-  it 'has a version number' do
-    expect(RakutenWebService::Rails::VERSION).not_to be nil
-  end
-
-  it 'does something useful' do
-    expect(false).to eq(true)
-  end
+describe RakutenWebService::Railtie do
 end
