@@ -1,5 +1,5 @@
 module RakutenWebService
-  module Rails
+  class Railtie < ::Rails::Railtie
     VERSION = "0.1.0"
   end
 end
