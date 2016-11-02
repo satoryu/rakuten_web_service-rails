@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rakuten_web_service/rails'
+require 'rakuten_web_service/rails/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "rakuten_web_service-rails"
-  spec.version       = RakutenWebService::Railtie::VERSION
+  spec.version       = RakutenWebService::Rails::VERSION
   spec.authors       = ["Tatsuya Sato"]
   spec.email         = ["satoryu.1981@gmail.com"]
 
