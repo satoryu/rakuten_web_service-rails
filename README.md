@@ -1,8 +1,6 @@
 # RakutenWebService::Rails
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rakuten_web_service/rails`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+The gem provides an initializer to load the configuration for accessing Rakuten Web Service from YAML file in your Rails app's `config` directory.
 
 ## Installation
 
@@ -22,7 +20,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Put your configuration to access Rakuten Web Service, application ID and affiliate ID, in YAML to `/path/to/your_rails_app/config/rakuten_web_service.yml` like:
+
+  ```yaml
+  development:
+    application_id: 'your application id' # Required
+    affiliate_id: 'your affiliate id' # Optional
+
+  test:
+    application_id: 'your application id' # Required
+    affiliate_id: 'your affiliate id' # Optional
+
+  production:
+    application_id: 'your application id for PROD' # Required
+  ```
+
+That's it!
 
 ## Development
 
