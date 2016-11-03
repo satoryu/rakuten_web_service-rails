@@ -3,8 +3,8 @@ development:
   affiliate_id: development_affiliate_id
 
 test:
-  application_id: rails_application_id
-  affiliate_id: <%= ENV['AFFILIATE_ID'] %>
+  application_id: test_application_id
+  affiliate_id: <%= ENV['RWS_AFFILIATE_ID'] %>
 
 production:
   application_id: development_application_id
