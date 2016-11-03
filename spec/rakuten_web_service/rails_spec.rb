@@ -1,7 +1,12 @@
 require 'spec_helper'
 
 describe RakutenWebService::Railtie do
-  describe RakutenWebService::Configuration do
+  describe ".load_configuration" do
+    before do
+      config_path = File.expand_path('../../fixtures/rakuten_web_service.yml', __FILE__)
+      RakutenWebService::Railtie.instance.load_configuration(config_path, 'test')
+    end
+
     subject { RakutenWebService.configuration }
 
     it "has the configurations for TEST env" do

@@ -4,7 +4,7 @@ development:
 
 test:
   application_id: test_application_id
-  affiliate_id: <%= ENV['AFFILIATE_ID'] %>
+  affiliate_id: test_affiliate_id
 
 production:
   application_id: development_application_id
