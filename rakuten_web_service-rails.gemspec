@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["satoryu.1981@gmail.com"]
 
   spec.summary       = %q{Integrate 'rakuten_web_service' with your Rails app.}
-  spec.description   = %q{This gem provides a generator and helpers to help you integrate 'rakuten_web_service' with your Rails applications.}
+  spec.description   = %q{This gem provides an initializer to load configurations of 'rakuten_web_service' with your Rails applications.}
   spec.homepage      = "https://github.com/satoryu/rakuten_web_service-rails"
   spec.license       = "MIT"
 
