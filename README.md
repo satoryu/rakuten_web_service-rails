@@ -1,4 +1,5 @@
 # RakutenWebService::Rails
+[![Gem Version](https://badge.fury.io/rb/rakuten_web_service-rails.svg)](https://badge.fury.io/rb/rakuten_web_service-rails)
 
 The gem provides an initializer to load the configuration for accessing Rakuten Web Service from YAML file in your Rails app's `config` directory.
 
