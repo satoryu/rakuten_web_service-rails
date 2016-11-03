@@ -32,7 +32,7 @@ Put your configuration to access Rakuten Web Service, application ID and affilia
     affiliate_id: 'your affiliate id' # Optional
 
   production:
-    application_id: 'your application id for PROD' # Required
+    application_id: <%= ENV['RAS_APPLICATION_ID'] %> # This configuration file is dealt as ERB
   ```
 
 That's it!
@@ -45,7 +45,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rakuten_web_service-rails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/satoryu/rakuten_web_service-rails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
