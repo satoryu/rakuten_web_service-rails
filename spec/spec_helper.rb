@@ -15,4 +15,8 @@ RSpec.configure do |config|
        example.run
      end
   end
+
+  config.after do
+    RakutenWebService.instance_variable_set(:@configuration, nil)
+  end
 end
