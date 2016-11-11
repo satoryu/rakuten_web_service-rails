@@ -12,10 +12,13 @@ module RakutenWebService
 
     def load_configuration(config_path, environment)
       config = YAML.load(ERB.new(File.read(config_path)).result(binding))[environment]
-      RakutenWebService.configure do |c|
-        c.application_id = config['application_id']
-        c.affiliate_id = config['affiliate_id']
+      if config
+        RakutenWebService.configure do |c|
+          c.application_id = config['application_id']
+          c.affiliate_id = config['affiliate_id']
+        end
       end
+      raise RuntimeError unless RakutenWebService.configuration.has_required_options?
     end
   end
 end
