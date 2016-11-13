@@ -40,6 +40,14 @@ describe RakutenWebService::Railtie do
           RakutenWebService::Railtie.instance.load_configuration(config_path, 'test')
         }.to raise_error(RuntimeError)
       end
+
+      context "but defined by environment variable", env: { rws_application_id: 'env_application_id' } do
+        it "doen's raise runtime error" do
+          expect {
+            RakutenWebService::Railtie.instance.load_configuration(config_path, 'test')
+          }.to_not raise_error
+        end
+      end
     end
   end
 end
