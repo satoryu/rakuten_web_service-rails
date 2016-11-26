@@ -38,7 +38,7 @@ describe RakutenWebService::Railtie do
       it "raises runtime error" do
         expect {
           RakutenWebService::Railtie.instance.load_configuration(config_path, 'test')
-        }.to raise_error(RuntimeError)
+        }.to raise_error(RuntimeError, "Required configuration for RakutenWebService has not been set")
       end
 
       context "but defined by environment variable", env: { rws_application_id: 'env_application_id' } do

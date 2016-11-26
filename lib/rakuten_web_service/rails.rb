@@ -18,7 +18,7 @@ module RakutenWebService
           c.affiliate_id = config['affiliate_id']
         end
       end
-      raise RuntimeError unless RakutenWebService.configuration.has_required_options?
+      raise RuntimeError, "Required configuration for RakutenWebService has not been set" unless RakutenWebService.configuration.has_required_options?
     end
   end
 end
