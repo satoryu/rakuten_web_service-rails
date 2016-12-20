@@ -22,20 +22,29 @@ Or install it yourself as:
 
 ## Usage
 
-Put your configuration to access Rakuten Web Service, application ID and affiliate ID, in YAML to `/path/to/your_rails_app/config/rakuten_web_service.yml` like:
+This gem provides a generator to put configuration to access Rakuten Web Service.
+
+```sh
+$ rails generator rakuten_web_service:conig
+```
+
+Ater that, you will find `rakuten_web_service.yml` under the `config` directory.
 
   ```yaml
   development:
-    application_id: 'your application id' # Required
-    affiliate_id: 'your affiliate id' # Optional
+    application_id: DEV_APPLICATION_ID
+    affiliate_id: DEV_AFFILIATE_ID
 
   test:
-    application_id: 'your application id' # Required
-    affiliate_id: 'your affiliate id' # Optional
+    application_id: TEST_APPLICATION_ID
+    affiliate_id: TEST_AFFILIATE_ID
 
   production:
-    application_id: <%= ENV['RAS_APPLICATION_ID'] %> # This configuration file is dealt as ERB
+    application_id: <%= ENV['RWS_APPLICATION_ID'] %>
+    affiliate_id: <%= ENV['RWS_AFFILIATE_ID'] %>
   ```
+
+Replace `APPLICATION_ID` and `AFFILIATE_ID` with appropriate ones.
 
 That's it!
 
