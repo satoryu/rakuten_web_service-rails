@@ -9,3 +9,5 @@
 /tmp/
 /gemfiles/*.lock
 *.sqlite3
+spec/tmp/
+*.log
