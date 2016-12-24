@@ -1,11 +1,6 @@
 require 'spec_helper'
 
-describe RakutenWebService::Railtie do
-  before do
-    ENV['RAILS_ENV'] = 'test'
-    require File.expand_path('./../../dummy_app/config/environment', __FILE__)
-  end
-
+describe RakutenWebService::Railtie, :integration do
   subject { RakutenWebService.configuration }
 
   it "has the configuration defined by YAML file under the app's config dir" do

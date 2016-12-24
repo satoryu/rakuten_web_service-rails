@@ -8,6 +8,11 @@ gemfile:
 - gemfiles/Gemfile.rail4
 - gemfiles/Gemfile.rail5
 before_install: gem install bundler -v 1.12.5
+
+script:
+  - bundle exec rspec
+  - bundle exec rspec --tag integration
+
 matrix:
   exclude:
   - rvm: 2.1.9

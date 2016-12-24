@@ -1,7 +1,13 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+
+ENV['RAILS_ENV'] = 'test'
+require File.expand_path('./../dummy_app/config/environment', __FILE__)
+require 'ammeter/init'
 require 'rakuten_web_service/rails'
 
 RSpec.configure do |config|
+  config.filter_run_excluding :integration
+
   config.around(:all) do |example|
      if env = example.metadata[:env]
        env.each do |k, v|
