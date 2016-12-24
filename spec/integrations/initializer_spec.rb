@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe RakutenWebService::Railtie do
+describe RakutenWebService::Railtie, :integration do
   subject { RakutenWebService.configuration }
 
   it "has the configuration defined by YAML file under the app's config dir" do

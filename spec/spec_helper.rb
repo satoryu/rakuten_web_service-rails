@@ -6,6 +6,8 @@ require 'ammeter/init'
 require 'rakuten_web_service/rails'
 
 RSpec.configure do |config|
+  config.filter_run_excluding :integration
+
   config.around(:all) do |example|
      if env = example.metadata[:env]
        env.each do |k, v|
