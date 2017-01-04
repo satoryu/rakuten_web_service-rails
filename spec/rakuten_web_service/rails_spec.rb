@@ -49,5 +49,15 @@ describe RakutenWebService::Railtie do
         end
       end
     end
+
+    context "When the configuration file doesn't exist" do
+      let(:config_path) { '/path/to/wrong_file.yml' }
+
+      it "should not raise any error when loading the configuration" do
+        expect {
+          RakutenWebService::Railtie.instance.load_configuration(config_path, 'test')
+        }.to_not raise_error
+      end
+    end
   end
 end
