@@ -1,3 +1,9 @@
+# v0.3.0 (January 4, 2017)
+
+## Enhancement
+
+* The generator `rakuten_web_service:config` has been rolled out! [#5](https://github.com/satoryu/rakuten_web_service-rails/pull/5)
+
 # v0.2.0 (November 3, 2016)
 
 ## Enhancements
