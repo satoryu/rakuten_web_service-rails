@@ -59,7 +59,7 @@
             }
         },
         {
-            "taskName": "bunlde install",
+            "taskName": "bundle install",
             "suppressTaskName": true,
             "command": "bundle",
             "args": [
