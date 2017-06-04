@@ -33,4 +33,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "ammeter", "~> 1.1.4"
+  spec.add_development_dependency 'ruby-debug-ide', '~> 0.6.0'
+  spec.add_development_dependency 'debase', '0.2.2.beta10'
 end
