@@ -1,12 +1,16 @@
 sudo: false
 language: ruby
+cache: bundler
 rvm:
-- 2.1.9
-- 2.2.5
-- 2.3.1
+  - 2.1.9
+  - 2.2.5
+  - 2.3.1
+  - 2.4.1
+
 gemfile:
-- gemfiles/Gemfile.rail4
-- gemfiles/Gemfile.rail5
+  - gemfiles/Gemfile.rail4
+  - gemfiles/Gemfile.rail5
+
 before_install: gem install bundler -v 1.12.5
 
 script:
@@ -17,6 +21,7 @@ matrix:
   exclude:
   - rvm: 2.1.9
     gemfile: gemfiles/Gemfile.rail5
+
 notifications:
   email: false
 
