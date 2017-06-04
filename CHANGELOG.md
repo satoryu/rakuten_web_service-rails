@@ -1,3 +1,7 @@
+## Improvement
+
+* Starts support for rakuten_web_service v1.5.0 [#8](https://github.com/satoryu/rakuten_web_service-rails/pull/5)
+
 # v0.3.0 (January 4, 2017)
 
 ## Enhancement
