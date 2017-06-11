@@ -13,7 +13,6 @@ before_install: gem install bundler -v 1.12.5
 script:
 - bundle exec rspec
 - bundle exec rspec --tag integration
-- echo $TRAVIS_RUBY_VERSION
 matrix:
   exclude:
   - rvm: 2.1.9
@@ -29,6 +28,5 @@ deploy:
     secure: Ynt1TYffHV1wL2wmGOnLe+D7OXLPpbh4ZYgGjXC6Ru690kQYQwYQVzsvZ7ClZ+fJBQoYmdFNqbBTdkA5nxp0fbRq9ZpMbEunxcoWhXaZLczMoh2kP4YUKowv/Wmq3vzh64irzUZHN/ykYPNeqoZQmqD3QiWIShJCvN6cMXEQlF85s830XUoBNGwCYx1gC1mVI8SQizbsnAS/hmCoXp+fS6igu+GmQuYzyuZZy8+L+RlHQDronFH7C2C2dOpvMPPhrlSsLMTIosJ48Ib+afhBBMO3VuLu0hgrIkwlI9e9YtTELEtNxdNJDtbRSFQuXn8cOLL7Zv6hfWpcxiWk5EoCD9rtT5BQFWjzshoBsZtCRxCke5nId/AB1eztIKF9KrH4uir+aURqp7irKK+eITMJ0obDz/pe/GLgAVU68zJmKSOUvlRernumAy0beiyu/0Zr3YO51+2EDo+uT2x5f7ANgzmUuvLh9grWG+Ld2N1bqESw/cvmilfwzzUtLUSd0hA8aOtvMOcEpS5GAbqY59TeZ+SR2dIuGoIN2qkHTKF5M7HwIKDUM2gFUZM32xHkoX+MrPzuY7hAq9n79QhprAjUqdjIbJVvvXLwZadI5gjFtaBV4p3Ah19JAN6y+NX0mkDI1bSCQoQUDiSRRMz+pZJt2qo+WF3Q9H8tcc14nHV9v8E=
   gem: rakuten_web_service-rails
   on:
-    branch: setup_for_deploying_from_travis
     repo: satoryu/rakuten_web_service-rails
     condition: $TRAVIS_RUBY_VERSION = 2.4.1
