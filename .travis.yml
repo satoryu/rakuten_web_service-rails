@@ -19,6 +19,7 @@ matrix:
   exclude:
   - rvm: 2.1.9
     gemfile: gemfiles/Gemfile.rail5
+  allow_failures:
   - rvm: ruby-head
 notifications:
   email: false
