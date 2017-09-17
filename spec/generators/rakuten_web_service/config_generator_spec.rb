@@ -15,8 +15,8 @@ describe RakutenWebService::ConfigGenerator, type: :generator do
     subject { file('config/rakuten_web_service.yml') }
 
     it { is_expected.to exist }
-    it { is_expected.to contain /^development:$/ }
-    it { is_expected.to contain /^test:$/ }
-    it { is_expected.to contain /^production:$/ }
+    it { is_expected.to contain(/^development:$/) }
+    it { is_expected.to contain(/^test:$/) }
+    it { is_expected.to contain(/^production:$/) }
   end
 end
