@@ -1,6 +1,9 @@
 # RakutenWebService::Rails
 [![Gem Version](https://badge.fury.io/rb/rakuten_web_service-rails.svg)](https://badge.fury.io/rb/rakuten_web_service-rails)
 [![Build Status](https://travis-ci.org/satoryu/rakuten_web_service-rails.svg?branch=master)](https://travis-ci.org/satoryu/rakuten_web_service-rails)
+[![Code Climate](https://codeclimate.com/github/satoryu/rakuten_web_service-rails/badges/gpa.svg)](https://codeclimate.com/github/satoryu/rakuten_web_service-rails)
+[![Test Coverage](https://codeclimate.com/github/satoryu/rakuten_web_service-rails/badges/coverage.svg)](https://codeclimate.com/github/satoryu/rakuten_web_service-rails/coverage)
+[![Issue Count](https://codeclimate.com/github/satoryu/rakuten_web_service-rails/badges/issue_count.svg)](https://codeclimate.com/github/satoryu/rakuten_web_service-rails)
 
 The gem provides an initializer to load the configuration for accessing Rakuten Web Service from YAML file in your Rails app's `config` directory.
 
