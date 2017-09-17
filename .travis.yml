@@ -6,10 +6,12 @@ rvm:
 - 2.2.5
 - 2.3.1
 - 2.4.1
+- ruby-head
 gemfile:
 - gemfiles/Gemfile.rail4
 - gemfiles/Gemfile.rail5
 before_install: gem install bundler -v 1.12.5
+bundler_args: --without vscode
 script:
 - bundle exec rspec
 - bundle exec rspec --tag integration
@@ -17,6 +19,8 @@ matrix:
   exclude:
   - rvm: 2.1.9
     gemfile: gemfiles/Gemfile.rail5
+  allow_failures:
+  - rvm: ruby-head
 notifications:
   email: false
   webhooks:

@@ -4,3 +4,8 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'sqlite3'
+
+group :vscode do
+  gem 'ruby-debug-ide', '~> 0.6.0'
+  gem 'debase', '0.2.2.beta10'
+end
