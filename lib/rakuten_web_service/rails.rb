@@ -11,7 +11,7 @@ module RakutenWebService
     end
 
     def load_configuration(config_path, environment)
-      return unless File.exists? config_path
+      return unless File.exist?(config_path)
 
       config = YAML.load(ERB.new(File.read(config_path)).result(binding))[environment]
       if config
