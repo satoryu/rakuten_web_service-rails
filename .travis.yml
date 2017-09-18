@@ -11,10 +11,12 @@ gemfile:
 - gemfiles/Gemfile.rail4
 - gemfiles/Gemfile.rail5
 before_install: gem install bundler -v 1.12.5
-bundler_args: --without vscode
+bundler_args: "--without vscode"
 script:
 - bundle exec rspec
 - bundle exec rspec --tag integration
+after_script:
+- bundle exec codeclimate-test-reporter
 matrix:
   exclude:
   - rvm: 2.1.9
@@ -25,7 +27,7 @@ notifications:
   email: false
   webhooks:
     urls:
-      - https://webhooks.gitter.im/e/8dfbb94cdb25ff174f4e
+    - https://webhooks.gitter.im/e/8dfbb94cdb25ff174f4e
 deploy:
   provider: rubygems
   api_key:
@@ -33,4 +35,8 @@ deploy:
   gem: rakuten_web_service-rails
   on:
     repo: satoryu/rakuten_web_service-rails
-    condition: $TRAVIS_RUBY_VERSION = 2.4.1
+    condition: "$TRAVIS_RUBY_VERSION = 2.4.1"
+addons:
+  code_climate:
+    repo_token:
+      secure: daHyv4oum5q/gRA/7S3USdf5jlninNNEhweKDeOHfgTLAafEXSq87DOqfbjw3ug0Kxur0JtwPHcooEwMLJDq5kDAwpRTdProdlN9HAkSJ9eHEaN3azgnxOraAEIoyXkqiUqddLpJ+An2rbagemZRykPG78SWwKAkDUBG0iDaZsBPN1KSj5a+NjdFGMy7q1YPcfQHWT753AE4SjiNdFv29WP3mLIJSkDRBqIdMGMzqPxX4I03baSqmO9+6JmQN/zAy/bjmpf74OemDa0PiLxgzDaDvys0sI6ecYPxNlfYdRNDqPN+YIXZzio6yMIrFwGv7T+Lwr3CJ66pMAy9Hj+3BEj2TpBeHZS4d0eR1rDDBJKczL+kd/v8ZInFnovELKI6OdWImYJCcUrBMoY7pEOqIao9MIjgHtOONcKaxXgZOa6HuJUwihNcy4sdmH2qnCz0Cx0UIwrHLXG0iDq90WYkwbLF4WnXK2XmMQyVRqAgEFEE/Gfxsnr1SqQJAkmT7UR5GzdQREI9S9aCseW3IKMrSbkpSIOXlmF+oFHyAU7Z3LZ3Zp9l6te7csDb9PeGuXlG1tQ+BfWg2ddwTxNNOBFFS2OgWGa1ZB7zBprS3khg0oUOJ4nlivFgz0l7d41kvmvBOWeINKtlSf5aI5M1hoKaRV2WbmCTLNkhbCZe0/8N8Q4=
