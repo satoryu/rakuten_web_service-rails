@@ -6,11 +6,11 @@ gemspec
 gem 'sqlite3'
 
 group :test do
-  gem 'simplecov', require: false
   gem 'codeclimate-test-reporter', '~> 1.0.8'
+  gem 'simplecov', require: false
 end
 
 group :vscode do
+  gem 'debase', '0.2.2.beta14'
   gem 'ruby-debug-ide', '~> 0.6.0'
-  gem 'debase', '0.2.2.beta10'
 end
