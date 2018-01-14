@@ -10,6 +10,7 @@ rvm:
 gemfile:
 - gemfiles/Gemfile.rail4
 - gemfiles/Gemfile.rail5
+before_install: gem update --system
 bundler_args: "--without vscode"
 script:
 - bundle exec rspec
