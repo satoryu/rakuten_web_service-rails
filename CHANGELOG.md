@@ -1,3 +1,9 @@
+# v0.6.0 (Jan 16, 2018)
+
+## Improvements
+
+* Update supported ruby versions. [#19](https://github.com/satoryu/rakuten_web_service-rails/pull/19)
+
 # v0.5.0 (Aug 15, 2017)
 
 ## Improvements
