@@ -17,17 +17,18 @@ RSpec.configure do |config|
   config.filter_run_excluding :integration
 
   config.around(:all) do |example|
-     if env = example.metadata[:env]
-       env.each do |k, v|
-         ENV[k.to_s.upcase] = v.to_s
-       end
+    env = example.metadata[:env]
+    if env
+      env.each do |k, v|
+        ENV[k.to_s.upcase] = v.to_s
+      end
 
-       example.run
+      example.run
 
-       env.keys { |k| ENV.delete k }
-     else
-       example.run
-     end
+      env.keys { |k| ENV.delete k }
+    else
+      example.run
+    end
   end
 
   config.after do
