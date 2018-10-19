@@ -8,8 +8,9 @@ rvm:
 - 2.5.0
 - ruby-head
 gemfile:
-- gemfiles/Gemfile.rail4
-- gemfiles/Gemfile.rail5
+- gemfiles/Gemfile.rails4
+- gemfiles/Gemfile.rails5_1
+- gemfiles/Gemfile.rails5_2
 before_install: gem update --system
 bundler_args: "--without vscode"
 script:
