@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.description   = 'This gem provides an initializer to load configurations of \'rakuten_web_service\' with your Rails applications.'
   spec.homepage      = 'https://github.com/satoryu/rakuten_web_service-rails'
   spec.license       = 'MIT'
-  spec.required_ruby_version = '>= 2.2.0'
+  spec.required_ruby_version = '>= 2.3.0'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
-  spec.add_dependency 'rails', '> 4.2', '< 5.2.0'
+  spec.add_dependency 'rails', '> 4.2', '< 5.3.0'
   spec.add_dependency 'rakuten_web_service', '~> 1.9'
 
   spec.add_development_dependency 'ammeter', '~> 1.1', '>= 1.1.4'
