@@ -24,6 +24,10 @@ after_script:
 matrix:
   allow_failures:
     - rvm: ruby-head
+    - rvm: 2.3.1
+      gemfile: gemfiles/rails_6.gemfile
+    - rvm: 2.4.1
+      gemfile: gemfiles/rails_6.gemfile
 notifications:
   email: false
   webhooks:
