@@ -2,30 +2,45 @@ sudo: false
 language: ruby
 cache: bundler
 rvm:
-- 2.3.1
-- 2.4.1
-- 2.5.0
-- 2.6.0
-- ruby-head
+  - 2.3.1
+  - 2.4.1
+  - 2.5.0
+  - 2.6.0
+  - ruby-head
+
 gemfile:
-- gemfiles/Gemfile.rails4
-- gemfiles/Gemfile.rails5_1
-- gemfiles/Gemfile.rails5_2
-before_install: gem update --system
+  - gemfiles/rails_4.gemfile
+  - gemfiles/rails_5.1.gemfile
+  - gemfiles/rails_5.2.gemfile
+  - gemfiles/rails_6.gemfile
+
+before_install:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
 bundler_args: "--without vscode"
 script:
-- bundle exec rspec
-- bundle exec rspec --tag integration
+  - bundle exec rspec
+  - bundle exec rspec --tag integration
+
 after_script:
-- bundle exec codeclimate-test-reporter
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
 matrix:
   allow_failures:
-  - rvm: ruby-head
+    - rvm: ruby-head
+    - rvm: 2.3.1
+      gemfile: gemfiles/rails_6.gemfile
+    - rvm: 2.4.1
+      gemfile: gemfiles/rails_6.gemfile
+
 notifications:
   email: false
   webhooks:
     urls:
-    - https://webhooks.gitter.im/e/8dfbb94cdb25ff174f4e
+      - https://webhooks.gitter.im/e/8dfbb94cdb25ff174f4e
+
 deploy:
   provider: rubygems
   api_key:
@@ -33,7 +48,8 @@ deploy:
   gem: rakuten_web_service-rails
   on:
     repo: satoryu/rakuten_web_service-rails
-    condition: "$TRAVIS_RUBY_VERSION = 2.5.0"
+    condition: "$TRAVIS_RUBY_VERSION = 2.6.0"
+
 addons:
   code_climate:
     repo_token:
