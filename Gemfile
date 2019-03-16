@@ -5,7 +5,6 @@ gemspec
 
 group :test do
   gem 'codeclimate-test-reporter', '~> 1.0.8'
-  gem 'simplecov', require: false
 end
 
 group :vscode do
