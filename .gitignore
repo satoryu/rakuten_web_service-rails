@@ -7,7 +7,6 @@
 /pkg/
 /spec/reports/
 /tmp/
-/gemfiles/*.lock
 *.sqlite3
 spec/tmp/
-*.log
+spec/dummy_app/log/

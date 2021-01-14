@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        ruby-version:
+          - 2.5
+          - 2.6
+          - 2.7
+          - "3.0"
+          - head
+        rails-version:
+          - 5.2
+          - "6.0"
+          - 6.1
+
+    env:
+      BUNDLE_WITHOUT: vscode
+      RAILS_VERSION: ${{ matrix.rails-version }}
+
+    continue-on-error: ${{ matrix.ruby-version == 'head' }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: true
+      - name: Run test
+        run: bundle exec rake

@@ -6,10 +6,10 @@ if ENV['CI']
   end
 end
 
-$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
 
 ENV['RAILS_ENV'] = 'test'
-require File.expand_path('./../dummy_app/config/environment', __FILE__)
+require File.expand_path('./dummy_app/config/environment', __dir__)
 require 'ammeter/init'
 require 'rakuten_web_service/rails'
 
