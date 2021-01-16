@@ -42,7 +42,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       BUNDLE_WITHOUT: vscode
-      BUNDLE_GEMFILE: gemfile/rails_6.1.gemfile
+      BUNDLE_GEMFILE: gemfiles/rails_6.1.gemfile
 
     steps:
       - uses: actions/checkout@v2
