@@ -36,3 +36,25 @@ jobs:
           bundler-cache: true
       - name: Run test
         run: bundle exec rake
+
+  coverage:
+    runs-on: ubuntu-latest
+    env:
+      BUNDLE_WITHOUT: vscode
+      BUNDLE_GEMFILE: gemfile/rails_6.1.gemfile
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.0"
+          bundler-cache: true
+      - name: Run test
+        run: bundle exec rake
+        env:
+          CI: enabled
+      - uses: paambaati/codeclimate-action@v2
+        with:
+          debug: true
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
