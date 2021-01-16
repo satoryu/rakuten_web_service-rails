@@ -54,7 +54,7 @@ jobs:
         run: bundle exec rake
         env:
           CI: enabled
-      - uses: paambaati/codeclimate-action@v2
+      - uses: paambaati/codeclimate-action@v2.7.5
         with:
           debug: true
         env:
