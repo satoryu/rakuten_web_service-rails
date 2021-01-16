@@ -50,12 +50,10 @@ jobs:
         with:
           ruby-version: "3.0"
           bundler-cache: true
-      - name: Run test
-        run: bundle exec rake
-        env:
-          CI: enabled
       - uses: paambaati/codeclimate-action@v2.7.5
         with:
+          coverageCommand: bundle exec rake
           debug: true
         env:
+          CI: enabled
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
