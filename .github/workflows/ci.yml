@@ -38,6 +38,7 @@ jobs:
         run: bundle exec rake
 
   coverage:
+    needs: [ test ]
     runs-on: ubuntu-latest
     env:
       BUNDLE_WITHOUT: vscode
